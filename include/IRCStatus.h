@@ -1,0 +1,138 @@
+#ifndef IRCSTATUS_H
+#define IRCSTATUS_H
+#define cint static const int
+
+namespace IRCStatus {
+//error replies.
+struct ERR {
+    cint ERR_NOSUCHNICK = 401;
+    cint ERR_NOSUCHSERVER = 402;
+    cint ERR_NOSUCHCHANNEL = 403;
+    cint ERR_CANNOTSENDTOCHAN = 404;
+    cint ERR_TOOMANYCHANNELS = 405;
+    cint ERR_WASNOSUCHNICK = 406;
+    cint ERR_TOOMANYTARGETS = 407;
+    cint ERR_NOORIGIN = 409;
+    cint ERR_NORECIPIENT = 411;
+    cint ERR_NOTEXTTOSEND = 412;
+    cint ERR_NOTOPLEVEL = 413;
+    cint ERR_WILDTOPLEVEL = 414;
+    cint ERR_UNKNOWNCOMMAND = 421;
+    cint ERR_NOMOTD = 422;
+    cint ERR_NOADMININFO = 423;
+    cint ERR_FILEERROR = 424;
+    cint ERR_NONICKNAMEGIVEN = 431;
+    cint ERR_ERRONEUSNICKNAME = 432;
+    cint ERR_NICKNAMEINUSE = 433;
+    cint ERR_NICKCOLLISION = 436;
+    cint ERR_USERNOTINCHANNEL = 441;
+    cint ERR_NOTONCHANNEL = 442;
+    cint ERR_USERONCHANNEL = 443;
+    cint ERR_NOLOGIN = 444;
+    cint ERR_SUMMONDISABLED = 445;
+    cint ERR_USERSDISABLED = 446;
+    cint ERR_NOTREGISTERED = 451;
+    cint ERR_NEEDMOREPARAMS = 461;
+    cint ERR_ALREADYREGISTERED = 462;
+    cint ERR_NOPERMFORHOST = 463;
+    cint ERR_PASSWDMISMATCH = 464;
+    cint ERR_YOURBANNEDCREEP = 465;
+    cint ERR_KEYSET = 467;
+    cint ERR_CHANNELISFULL = 471;
+    cint ERR_UNKNOWNMODE = 472;
+    cint ERR_INVITEONLYCHAN = 473;
+    cint ERR_BANNEDFROMCHAN = 474;
+    cint ERR_NOPRIVILEGES = 481;
+    cint ERR_CHANOPRIVSNEEDED = 482;
+    cint ERR_CANTKILLSERVER = 483;
+    cint ERR_NOOPERHOST = 491;
+    cint ERR_UMODEUNKNOWNFLAG = 501;
+    cint ERR_USERSDONTMATCH = 502;
+};
+
+struct RPL {
+    cint RPL_NONE = 300;
+
+    cint RPL_USERHOST = 302;
+    cint RPL_ISON = 303;
+
+    cint RPL_AWAY = 301;
+    cint RPL_UNAWAY = 305;
+    cint RPL_NOWAWAY = 306;
+
+    cint RPL_WHOISUSER = 311;
+    cint RPL_WHOISSERVER = 312;
+    cint RPL_WHOISOPERATOR = 313;
+    cint RPL_WHOISIDLE = 317;
+    cint RPL_ENDOFWHOIS = 318;
+    cint RPL_WHOISCHANNELS = 319;
+
+    cint RPL_WHOWASUSER = 314;
+    cint RPL_ENDOFWHOWAS = 369;
+
+    cint RPL_LISTSTART = 321;
+    cint RPL_LIST = 322;
+    cint RPL_LISTEND = 323;
+    cint RPL_CHANNELMODEIS = 324;
+    cint RPL_NOTOPIC = 331;
+    cint RPL_TOPIC = 332;
+    cint RPL_INVITING = 341;
+    cint RPL_SUMMONING = 342;
+    cint RPL_VERSION = 351;
+    cint RPL_WHOREPLY = 352;
+    cint RPL_ENDOFWHO = 315;
+    cint RPL_NAMREPLY = 353;
+    cint RPL_ENDOFNAMES = 366;
+    cint RPL_LINKS = 367;
+    cint RPL_ENDOFLINKS = 365;
+    cint RPL_BANLIST;
+    cint RPL_ENDOFBANLIST = 368;
+    cint RPL_INFO = 371;
+    cint RPL_ENDOFINFO = 374;
+    cint RPL_MOTDSTART = 375;
+    cint RPL_MOTD = 372;
+    cint RPL_ENDOFMOTD = 376;
+    cint RPL_YOUROPER = 381;
+    cint RPL_REHASHING = 382;
+    cint RPL_TIME = 391;
+    cint RPL_USERSSTART = 392;
+    cint RPL_USERS = 393;
+    cint RPL_ENDOFUSERS = 394;
+    cint RPL_NOUSERS = 395;
+    cint RPL_TRACELINK = 200;
+    cint RPL_TRACECONNECTING = 201;
+    cint RPL_TRACEHANDSHAKE = 202;
+    cint RPL_TRACEUNKNOWN = 203;
+    cint RPL_TRACEOPERATOR = 204;
+    cint RPL_TRACEUSER = 205;
+    cint RPL_TRACESERVER = 206;
+    cint RPL_TRACENEWTYPE = 208;
+    cint RPL_TRACELOG = 261;
+    cint RPL_STATSLINKINFO = 211;
+    cint RPL_STATSCOMMANDS = 212;
+    cint RPL_STATSCLINE = 213;
+    cint RPL_STATSNLINE = 214;
+    cint RPL_STATSILINE = 215;
+    cint RPL_STATSKLINE = 216;
+    cint RPL_STATSYLINE = 218;
+    cint RPL_ENDOFSTATS = 219;
+    cint RPL_STATSLLINE = 241;
+    cint RPL_STATSUPTIME = 242;
+    cint RPL_STATSOLINE = 243;
+    cint RPL_STATSHLINE = 244;
+    cint RPL_UMODEIS = 221;
+
+    cint RPL_LUSERCLIENT = 251;
+    cint RPL_LUSEROP = 252;
+    cint RPL_LUSERUNKNOWN = 253;
+    cint RPL_LUSERCHANNELS = 254;
+    cint RPL_LUSERME = 255;
+    cint RPL_ADMINME = 256;
+    cint RPL_ADMINLOC1 = 257;
+    cint RPL_ADMINLOC2 = 258;
+    cint RPL_ADMINEMAIL = 259;
+};
+}
+
+#undef cint
+#endif // IRCSTATUS_H
