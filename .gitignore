@@ -19,3 +19,14 @@
 *.exe
 *.out
 *.app
+
+# QT
+/ui_*.h
+/moc_*
+/*.user*
+
+# Make
+/*.o
+
+# Dolphin
+.directory
